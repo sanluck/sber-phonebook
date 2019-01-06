@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozermapper.github.io/schema/bean-mapping"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozermapper.github.io/schema/bean-mapping http://dozermapper.github.io/schema/bean-mapping.xsd">
+    <configuration>
+        <custom-converters>
+            <converter type="ru.sanluck.phonebook.employees.GenderCustomConverter">
+                <class-a>ru.sanluck.phonebook.employees.Gender</class-a>
+                <class-b>java.lang.String</class-b>
+            </converter>
+        </custom-converters>
+    </configuration>
+    <mapping>
+        <class-a>ru.sanluck.phonebook.employees.Employee</class-a>
+        <class-b>ru.sanluck.phonebook.employees.EmployeeDto</class-b>
+        <field>
+            <a>birthdate</a>
+            <b date-format="dd.MM.yyyy">birthdate</b>
+        </field>
+    </mapping>
+</mappings>
