@@ -19,7 +19,9 @@ public class Emploees {
             Gender gender,
             Date birthdate,
             Department department,
-            String post
+            String post,
+            String phone,
+            String mobilePhone
     ) {
         Employee employee = new Employee();
         employee.setSurname(surname);
@@ -29,6 +31,8 @@ public class Emploees {
         employee.setBirthdate(birthdate);
         employee.setDepartment(department);
         employee.setPost(post);
+        employee.setPhone(phone);
+        employee.setMobilePhone(mobilePhone);
         return employee;
     }
 }

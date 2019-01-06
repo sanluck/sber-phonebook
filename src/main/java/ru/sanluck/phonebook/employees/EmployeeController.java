@@ -1,16 +1,19 @@
 package ru.sanluck.phonebook.employees;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 /**
  * Контроллер для работы с сотрудниками
  */
-@RestController
+@Controller
 public class EmployeeController {
+
+    private static final String EMPLOYEES = "employees";
 
     private EmployeeService employeeService;
 
@@ -20,7 +23,9 @@ public class EmployeeController {
     }
 
     @RequestMapping("/employees")
-    public List<Employee> getAllEmployees() {
-        return employeeService.getAllEmployees();
+    public String getAllEmployees(Model model) {
+        List<Employee> employees = employeeService.getAllEmployees();
+        model.addAttribute("employees", employees);
+        return EMPLOYEES;
     }
 }
