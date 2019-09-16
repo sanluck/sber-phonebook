@@ -15,7 +15,7 @@
         <class-b>ru.sanluck.phonebook.employees.EmployeeDto</class-b>
         <field>
             <a>birthdate</a>
-            <b date-format="dd.MM.yyyy">birthdate</b>
+            <b date-format="yyyy-MM-dd">birthdate</b>
         </field>
     </mapping>
 </mappings>

@@ -10,4 +10,5 @@ import java.util.List;
  */
 public interface EmployeeRepository extends CrudRepository<Employee, Integer> {
         List<Employee> findByDepartment(Department department);
+        Employee findById(Integer id);
 }

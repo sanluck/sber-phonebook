@@ -13,6 +13,9 @@ import java.util.Date;
 public class EmployeeDto {
     private Integer id;
     private String fio;
+    private String surname;
+    private String forename;
+    private String patronymic;
     private String gender;
     private String birthdate;
     private String phone;

@@ -28,9 +28,9 @@ public class PhonebookApplication {
             Department ca = departmentRepository.save(createDepartment("ЦА", "Центральный аппарат", sberbank));
             Department blockT = departmentRepository.save(createDepartment("Блок Т", "Блок Технологии", ca));
 
-            employeeRepository.save(createEmployee("Лукьянов", "Александр", "Алексеевич", MALE, new Date(), blockT, "Main Engeneer", "+796350xxxxx", "20205"));
-            employeeRepository.save(createEmployee("Верёвкин", "Максим", "Николаевич", MALE, new Date(), sberbank, "Chief Engeneer","+796350xxxxx", "2020x"));
-            employeeRepository.save(createEmployee("Голубев", "Александр", "Васильевич", MALE, new Date(), blockT, "Lead Engeneer", "+796350xxxxx", "2020x"));
+            employeeRepository.save(createEmployee("Лукьянов", "Александр", "Алексеевич", MALE, new Date(), blockT, "Main Engeneer", "20205", "+796350xxxxx"));
+            employeeRepository.save(createEmployee("Верёвкин", "Максим", "Николаевич", MALE, new Date(), sberbank, "Chief Engeneer", "2020x","+796350xxxxx"));
+            employeeRepository.save(createEmployee("Голубев", "Александр", "Васильевич", MALE, new Date(), blockT, "Lead Engeneer", "2020x", "+796350xxxxx"));
         };
     }
 }

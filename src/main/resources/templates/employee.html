@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title th:text="(${employee.id} == null ? 'Создать ' : 'Редактировать ') + 'сотрудника'">Создать \ редактировать
+        сотрудника</title>
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"
+          href="https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/3.3.7/css/bootstrap.min.css"
+          rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div th:include="sber_header :: sbersign">
+    <img src="../static/images/sber.png"/>
+</div>
+<form action="#" th:action="@{/employee/save}" th:object="${employee}" method="post" class="form">
+    <div class="form-group">
+        <label for="surname">Фамилия</label>
+        <input type="text" class="form-control" th:field="*{surname}" id="surname" placeholder="Введите фамилию"/>
+    </div>
+    <div class="form-group">
+        <label for="forename">Имя</label>
+        <input type="text" class="form-control" th:field="*{forename}" id="forename" placeholder="Введите имя"/>
+    </div>
+    <div class="form-group">
+        <label for="patronymic">Отчество</label>
+        <input type="text" class="form-control" th:field="*{patronymic}" id="patronymic" placeholder="Введите отчество"/>
+    </div>
+    <div class="form-group">
+        <label for="gender">Пол</label>
+        <select id="gender" th:selected="*{gender}">
+
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="birthdate">Дата рождения</label>
+        <input type="date" class="form-control" th:field="*{birthdate}" id="birthdate" placeholder="Введите дату рождения"/>
+    </div>
+    <div class="form-group">
+        <label for="mobilePhone">Номер мобильного</label>
+        <input type="text" class="form-control" th:field="*{mobilePhone}" id="mobilePhone" placeholder="Введите номер мобильного"/>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Сохранить"/>
+</form>
+</body>
+</html>

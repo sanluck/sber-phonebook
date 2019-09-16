@@ -23,4 +23,12 @@ public class EmployeeService {
     public List<Employee> getAllEmployees() {
         return new ArrayList<>((Collection<? extends Employee>) employeeRepository.findAll());
     }
+
+    public Employee getEmployee(Integer id) {
+        return employeeRepository.findById(id);
+    }
+
+    public void save(Employee employee) {
+        employeeRepository.save(employee);
+    }
 }
